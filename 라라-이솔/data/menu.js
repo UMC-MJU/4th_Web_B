@@ -1,4 +1,4 @@
-menu = [
+const menu = [
   {
     image:
       "https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg",
@@ -299,14 +299,55 @@ menu = [
       "https://a0.muscache.com/pictures/d721318f-4752-417d-b4fa-77da3cbc3269.jpg",
     name: "타워",
   },
-  {
-    image:
-      "https://a0.muscache.com/pictures/31c1d523-cc46-45b3-957a-da76c30c85f9.jpg",
-    name: "캠핑카",
-  },
-  {
-    image:
-      "https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg",
-    name: "해변 근처",
-  },
+  // {
+  //   image:
+  //     "https://a0.muscache.com/pictures/31c1d523-cc46-45b3-957a-da76c30c85f9.jpg",
+  //   name: "캠핑카",
+  // },
+  // {
+  //   image:
+  //     "https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg",
+  //   name: "해변 근처",
+  // },
 ];
+
+let currentIndex = 0;
+
+const renderMenu = () => {
+  const menuContainer = document.getElementById("menus");
+  menuContainer.innerHTML = "";
+
+  const start = currentIndex;
+  const end = currentIndex + 10;
+  const currentMenu = menu.slice(start, end);
+
+  currentMenu.forEach((item) => {
+    const img = document.createElement("img");
+    img.src = item.image;
+
+    const name = document.createElement("div");
+    name.textContent = item.name;
+
+    const container = document.createElement("div");
+    container.appendChild(img);
+    container.appendChild(name);
+
+    menuContainer.appendChild(container);
+  });
+};
+
+document.getElementById("prevButton").addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex -= 10;
+    renderMenu();
+  }
+});
+
+document.getElementById("nextButton").addEventListener("click", () => {
+  if (currentIndex < menu.length - 10) {
+    currentIndex += 10;
+    renderMenu();
+  }
+});
+
+renderMenu();
