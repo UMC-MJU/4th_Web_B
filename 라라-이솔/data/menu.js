@@ -329,6 +329,7 @@ const renderMenu = () => {
     name.textContent = item.name;
 
     const container = document.createElement("div");
+    container.setAttribute("id", "imgName");
     container.appendChild(img);
     container.appendChild(name);
 

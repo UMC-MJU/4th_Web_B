@@ -6,6 +6,7 @@
     <title>클론코딩 실습(에어비엔비)</title>
     <link rel="stylesheet" href="./index.css" />
     <script src="./data/menu.js"></script>
+    <script src="./data/photo.js"></script>
   </head>
   <body>
     <script type="text/javascript" src="./index.js"></script>
@@ -50,10 +51,10 @@
       </div>
       <div id="menu">
         <div class="navi">
-          <button id="prevButton">이전</button>
+          <button id="prevButton"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg></button>
           <div id="menus"></div>
-          
-          <button id="nextButton">다음</button>
+          <button id="nextButton"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;"><g fill="none"><path d="m12 4 11.2928932 11.2928932c.3905243.3905243.3905243 1.0236893 0 1.4142136l-11.2928932 11.2928932"></path></g></svg></button>
+          <button id="filter"><svg style="height: 15px; width:18px"><path d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>필터</button>
           <script>
             window.onload = function() {
               const prevButton = document.getElementById('prevButton');
@@ -76,6 +77,52 @@
               renderMenu();
             }
           </script>
+        </div>
+      </div>
+      <div id="middle">
+        <div class="main">
+          <div id="photo-container"></div>
+          <script>
+            const photoContainer = document.querySelector("#photo-container");
+
+            for (let i = 0; i < photo.length; i++) {
+              
+              const button = document.createElement("button");
+              button.setAttribute("id", "mainBtn");
+            
+              // Set the button's image and text content
+              const img = document.createElement("img");
+              img.src = photo[i].image;
+              img.alt = photo[i].name;
+              button.appendChild(img);
+              button.appendChild(document.createTextNode(photo[i].name));
+            
+              // Add a click event listener to the button
+              button.addEventListener("click", () => {
+                console.log(photo[i].name);
+              });
+            
+              // Add the button to the photo container
+              photoContainer.appendChild(button);
+            
+              // Add a line break after every third button
+              if ((i + 1) % 6 === 0) {
+                photoContainer.appendChild(document.createElement("br"));
+              }
+            }
+            const buttons = document.querySelectorAll('#mainBtn');
+            const n = 6; // 한 줄에 표시할 버튼 개수
+            for(let i = 0; i < buttons.length; i += n) {
+              const div = document.createElement('div');
+              div.classList.add('button-row');
+              for(let j = 0; j < n; j++) {
+                if(i+j < buttons.length) {
+                  div.appendChild(buttons[i+j]);
+                }
+              }
+              photoContainer.appendChild(div);
+            }
+            </script>
         </div>
       </div>
     </div>
