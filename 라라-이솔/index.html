@@ -81,31 +81,59 @@
       </div>
       <div id="middle">
         <div class="main">
-          <div id="photo-container"></div>
+          <div class="buttonHead">
+            <button id="remove">게시물 없애기</button>
+            <button id="show">게시물 보이기</button>
+            <button id="copy">게시물 복제하기</button>
+            <script>
+              const removeButton = document.querySelector("#remove");
+        
+              removeButton.addEventListener("click", () => {
+                const photoContainer = document.querySelector("#photo-container");
+                photoContainer.style.display = "none";
+              });
+        
+              const showButton = document.querySelector("#show");
+        
+              showButton.addEventListener("click", () => {
+                const photoContainer = document.querySelector("#photo-container");
+                photoContainer.style.display = "block";
+              });
+            </script>
+          </div>
+          <div id="scroll">
+            <div id="photo-container"></div>
+          </div>
+            <!-- <div id="photo-container"></div> -->
           <script>
             const photoContainer = document.querySelector("#photo-container");
+            const copyBtn = document.querySelector("#copy");
+
+            copyBtn.addEventListener("click", () => {
+              const newContainer = photoContainer.cloneNode(true);
+              newContainer.id = "photo-container-" + (document.querySelectorAll("#photo-container").length + 1);
+              document.querySelector("#scroll").appendChild(newContainer);
+            });
 
             for (let i = 0; i < photo.length; i++) {
               
               const button = document.createElement("button");
               button.setAttribute("id", "mainBtn");
             
-              // Set the button's image and text content
+        
               const img = document.createElement("img");
               img.src = photo[i].image;
               img.alt = photo[i].name;
               button.appendChild(img);
               button.appendChild(document.createTextNode(photo[i].name));
             
-              // Add a click event listener to the button
               button.addEventListener("click", () => {
                 console.log(photo[i].name);
               });
             
-              // Add the button to the photo container
               photoContainer.appendChild(button);
             
-              // Add a line break after every third button
+              
               if ((i + 1) % 6 === 0) {
                 photoContainer.appendChild(document.createElement("br"));
               }
@@ -122,7 +150,7 @@
               }
               photoContainer.appendChild(div);
             }
-            </script>
+          </script>
         </div>
       </div>
     </div>
