@@ -1,0 +1,67 @@
+.content {
+    /* background-color: aqua; */
+    position: relative;
+    bottom: -30px;
+    width: 1360px;
+    height: 410px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.content-element{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
+
+.content-element__img{
+    width: 300px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.content-element__name {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.location {
+    margin-top: 5px;
+    opacity: 0.5;
+}
+.period {
+    margin-top: 5px;
+    opacity: 0.5;
+}
+
+.price {
+    font-style: bold;
+    margin-top: 10px;
+}
+
+.rate{
+    font-size: 15px;
+}
+
+.content-element a{
+    position: relative;
+    /*하트 아이콘에 position absolute를 쓰기 위해서*/
+}
+.content-element a i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+   
+}
