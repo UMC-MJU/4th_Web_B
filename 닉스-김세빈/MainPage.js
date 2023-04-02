@@ -45,3 +45,10 @@ function ImageChange() {
   var popup = document.getElementById("popup");
   popup.innerHTML = "<img src='" + popupImage + "'>";
 }
+
+function ImageLocalstorage() {
+  window.open("ImagePage.html");
+  var imagesrc = document.querySelector(".Last_part_image_1").src;
+  console.log(imagesrc);
+  localStorage.setItem("image", imagesrc);
+}
