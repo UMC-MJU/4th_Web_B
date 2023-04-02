@@ -25,7 +25,6 @@ TEST: 테스트 코드 추가 및 수정
 <br>
 
 ## 🍀 Members
-| [![텍스트](https://avatars.githubusercontent.com/u/94587782?v=4)](https://github.com/IDsebin) | [![텍스트](https://avatars.githubusercontent.com/u/94598346?v=4)](https://github.com/yongjae 23) | [![텍스트](https://avatars.githubusercontent.com/u/102508014?v=4)](https://github.com/
-KanuBang) | [![텍스트](https://avatars.githubusercontent.com/u/81205358?v=4)](https://github.com/sol0503) |
+| [![텍스트](https://avatars.githubusercontent.com/u/94587782?v=4)](https://github.com/IDsebin) | [![텍스트](https://avatars.githubusercontent.com/u/94598346?v=4)](https://github.com/yongjae 23) | [![텍스트](https://avatars.githubusercontent.com/u/102508014?v=4)](https://github.com/KanuBang) | [![텍스트](https://avatars.githubusercontent.com/u/81205358?v=4)](https://github.com/sol0503) |
 |:---:|:---:|:---:|:---:|
 | 닉스/김세빈 | 율/권용재 | 카누/방찬우 | 라라/이솔 |
