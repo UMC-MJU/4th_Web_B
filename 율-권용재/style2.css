@@ -1,0 +1,134 @@
+*{
+    /* border: 1px solid greenyellow; */
+}
+.grory {
+    position: relative; /* 부모가 relative를 선언하게 되면 자식들은 못 나가게됨 그래서 박스 안에 들어가게됨*/
+    background-color: black;
+    height: 100%;
+}
+video{
+    width: 100%;
+}
+.overlay{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: cals(100% - 100px);
+    padding: 10px 50px; /* 상하 좌우 */ 
+}
+.header{
+    display: flex;
+}
+.logo{
+    color: red;
+    margin-right: 40px ;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 36px;
+}
+.nav{
+    display: flex;
+    color: white;
+    line-height: 36px;
+}
+.nav-item{
+    padding: 0 10px;
+}
+.menu{
+    display: flex;
+    margin-left: auto;
+    color: white;
+    line-height: 36px;
+}
+.menu-item{
+    padding: 0 10px;
+    display: flex;
+}
+.banner{
+    color:white;
+    padding: 50px 0;
+}
+.series img{
+    width: 50%;
+}
+.badge{
+    font-size: 18px;
+    font-weight: 900;
+    padding: 15px 0;
+}
+.description{
+    width: 40%;
+}
+.buttons{
+    display: flex;
+    padding: 20px 0;
+}
+.white-button{
+    color: black;
+    background-color: white;
+    padding: 10px 25px; /* padding은 자기 자신 margin은 방어막같은거? padding 편한거같음*/
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.gray-button{
+    color: white;
+    background-color: rgba(170, 170, 170, .4); /*투명한거는 rgba*/
+    padding: 10px 25px; /* padding은 자기 자신 margin은 방어막같은거? padding 편한거같음*/
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.extra{
+    position:absolute;
+    right: 0;
+    width: 140px;
+    display: flex ;
+}
+
+.replay-button{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius:90px;
+}
+
+.rating{
+    background-color: rgba(170, 170, 170, .2);
+    border-left: 3px solid white;
+    padding-left: 10px;
+    width: 100%;
+    margin-left:10px;
+}
+
+.rating img{
+    width: 34px;
+    height: 34px;
+}
+
+.category-list{
+    width: 100%;
+}
+.title{
+    font-size: 18px;
+    font-weight: 900;
+    color:white;
+    padding:15px 0;
+}
+.list{
+    display: flex;
+}
+
+.movie{
+    padding:2px;
+}
+.movie:hover{
+    transform: scale(1.5);
+    transform: .1s;
+    transition-delay: .5s; 
+}
+.movie img{
+    border-radius: 4px;
+}
