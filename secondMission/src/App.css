@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Oswald&display=swap');
+@import "../src/css/styles.css";
+
+body{
+    background-color: #FFFFFF; /*배경색*/
+    font-family: Oswald;  /*폰트*/
+    height:1000vh;
+}

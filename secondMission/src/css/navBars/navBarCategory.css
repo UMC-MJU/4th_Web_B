@@ -1,0 +1,26 @@
+/*카테고리 국가 가로 배치 */
+.category-bar{
+    display: flex;
+    flex-direction: row; /*내부 아이템의 배치 방향*/
+    justify-content: space-between; /*내부 아이템의 가로 정렬 방식*/
+    align-items: center; /*내부 아이템의 세로 정렬 방식*/
+    /*background-color: aqua;*/
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 80px;
+
+}
+
+/*국기 이미지, 국가 이름 세로 배치*/
+.category-bar_element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*국기*/
+.category-bar_img {
+    width: 60px;
+    height: 60px;
+}

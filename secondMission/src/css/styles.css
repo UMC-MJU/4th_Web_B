@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Oswald&display=swap');
+@import "reset.css";
+
+/*navigation Bar CSS*/
+@import "navBars/navBar.css";
+@import "navBars/navBarInfo.css";
+@import "navBars/navBarSearch.css";
+@import "navBars/navBarCategory.css";
+
+/*content CSS*/
+@import "content.css";
+
+/*footer CSS*/
+@import "footer.css";
+
+
+body{
+    background-color: #FFFFFF; /*배경색*/
+    font-family: Oswald;  /*폰트*/
+    height:1000vh;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+/*a태그 밑줄 지우기*/
+a{
+    text-decoration: none;
+}
+
+button{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 20px;
+    background-color: #FF385C;
+}
+
