@@ -1,0 +1,27 @@
+.footer-bar{
+    display: block;
+    margin-left: 70px;
+
+    /* 스크롤 해도 화면 아래 쪽에 고정 */
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 90px;
+    background-color: #FFFF;
+}
+
+#footer-bar__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1360px;
+    height: 20px;
+}
+
+#footer-bar__copyright{
+    width: 1360px;
+    font-size: 13px;
+    opacity: 0.4;
+}
+
