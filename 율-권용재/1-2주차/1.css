@@ -1,0 +1,50 @@
+.navbar{
+    background-color: black;
+    color:white;
+    font-size: 14px;
+    
+
+}
+
+.container{
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    margin-left: auto;
+    color: white;
+    line-height: 36px;
+}
+.menu-item{
+    padding: 0 20px;
+    display: flex;
+}
+.netflix-logo{
+    height: 25px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+.menu2{
+    display: flex;
+    margin-left: auto;
+    color: white;
+    line-height: 36px;
+}
+.menu-item2{
+    padding: 0 20px;
+    display: flex;
+}
+.grory{
+    width: 100%;
+}
