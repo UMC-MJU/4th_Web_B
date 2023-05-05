@@ -1,5 +1,6 @@
 import "./page.css"
 import logo from "../src/logo.png";
+import { Link } from 'react-router-dom';
 export default function page(){
     return(
         <div className="showcase">
@@ -20,7 +21,7 @@ export default function page(){
                 <p2>시청할 준비가 되셨나요? 멤버쉽을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p2>
                 <div className="showcase-content-email">
                     <input type="email" id="email" name="email" class="email"placeholder="이메일 주소" required/>
-                    <button className = "btn btn-xl">시작하기</button>
+                    <Link to = {'/'}><button className = "btn btn-xl">시작하기</button></Link>
                 </div>
             </div>
 
