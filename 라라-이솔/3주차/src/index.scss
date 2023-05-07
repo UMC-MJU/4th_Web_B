@@ -158,11 +158,19 @@
 }
 
 .main .content .photoItem {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   flex-basis: calc(50% / 6);
   box-sizing: border-box;
   padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
 }
 .main .content .photoItem .placeBtn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   background-color: white;
   border: none;
@@ -172,7 +180,16 @@
   height: 256px;
   border-radius: 10px;
 }
-
+.like {
+  display: flex;
+  background-color: white;
+  border: 1px solid gray;
+  justify-content: flex-end;
+  width: 70px;
+  height: 25px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
 .detailPage {
   display: flex;
   flex-direction: column;

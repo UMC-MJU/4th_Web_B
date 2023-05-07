@@ -10,13 +10,14 @@ import { ReactComponent as RightArrow } from "../svg/rightArrow.svg";
 import { ReactComponent as Filter } from "../svg/filter.svg";
 import menu from "../data/menu";
 import photo from "../data/photo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // const menu = require("../data/menu");
 //import 와 export비교해보기
 
 const MainPage = () => {
   const [count, setCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(0);
   const itemsPage = 15;
 
   const navigate = useNavigate();
@@ -29,6 +30,14 @@ const MainPage = () => {
     setCount(count - itemsPage);
   };
 
+  useEffect(() => {
+    if (likeCount == 5) {
+      alert("우리 웹을 이용해주셔서 감사해요♡");
+    }
+  }, [likeCount]);
+  const handleLikeClick = () => {
+    setLikeCount((prevCount) => prevCount + 1);
+  };
   return (
     <div className="mainPage">
       <div className="mainHead">
@@ -127,7 +136,12 @@ const MainPage = () => {
                     className="placeBtn"
                   >
                     <img src={groupItem.image} alt={groupItem.name} />
-                    <p>{groupItem.name}</p>
+                    <div>
+                      <p>{groupItem.name}</p>
+                    </div>
+                  </button>
+                  <button className="like" onClick={handleLikeClick}>
+                    좋아요♥
                   </button>
                 </div>
               ));
