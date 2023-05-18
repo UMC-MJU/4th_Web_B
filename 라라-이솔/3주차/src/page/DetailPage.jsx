@@ -5,6 +5,7 @@ import { ReactComponent as User } from "../svg/user.svg";
 import { ReactComponent as Person } from "../svg/person.svg";
 import { ReactComponent as Search } from "../svg/search.svg";
 import { useLocation, useNavigate } from "react-router-dom";
+
 const DetailPage = () => {
   const location = useLocation();
   const navigate = useNavigate();

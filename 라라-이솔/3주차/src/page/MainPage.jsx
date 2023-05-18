@@ -67,6 +67,7 @@ const MainPage = () => {
               </button>
             </button>
           </div>
+          <button onClick={() => navigate("/weather")}>날씨 알아보기</button>
           <div className="headRight">
             <button className="yours" style={{ width: "232px" }}>
               당신의 공간을 에어비앤비하세요
