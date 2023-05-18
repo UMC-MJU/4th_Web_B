@@ -1,4 +1,4 @@
-.mainPage .mainHead {
+.mainHead {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,13 +9,7 @@
   top: 0;
 }
 
-.mainPage .mainHead .line {
-  height: 1px;
-  width: 100%;
-  background-color: #dddddd;
-}
-
-.mainPage .mainHead .headCenter1 {
+.headCenter1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,43 +18,44 @@
   width: 90%;
 }
 
-.mainPage .mainHead .headCenter1 .headLeft {
+.headCenter1 .headLeft {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.mainPage .mainHead .headCenter1 .search {
+.headCenter1 .search {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.mainPage .mainHead .headCenter1 .searchBtn {
+.headCenter1 .searchBtn {
   width: 370px;
   height: 48px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 30px;
 }
 
-.mainPage .mainHead .headCenter1 .searchBtn .btn {
+.headCenter1 .searchBtn .btn {
   margin-left: 10px;
   margin-right: 10px;
   background-color: white;
   border: none;
 }
 
-.mainPage .mainHead .headCenter1 .headRight {
+.headCenter1 .headRight {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
 }
 
-.mainPage .mainHead .headCenter1 .headRight .yours {
+.headCenter1 .headRight .yours {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +69,7 @@
   border: none;
 }
 
-.mainPage .mainHead .headCenter1 .headRight .lang {
+.headCenter1 .headRight .lang {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +78,7 @@
   cursor: pointer;
 }
 
-.mainPage .mainHead .headCenter1 .headRight .userBtn {
+.headCenter1 .headRight .userBtn {
   width: 77px;
   height: 42px;
   display: flex;
@@ -94,6 +89,12 @@
   background-color: white;
   cursor: pointer;
   transition: box-shadow 0.2s ease;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #dddddd;
 }
 
 .mainPage .mainHead .headCenter2 {
@@ -168,17 +169,25 @@
 .main .content {
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .main .content .photoItem {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   flex-basis: 8.3333333333%;
   box-sizing: border-box;
-  padding: 7px;
+  padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
 }
 
 .main .content .photoItem .placeBtn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   background-color: white;
   border: none;
@@ -188,4 +197,47 @@
   width: 270px;
   height: 256px;
   border-radius: 10px;
+}
+
+.like {
+  display: flex;
+  background-color: white;
+  border: 1px solid gray;
+  justify-content: flex-end;
+  width: 70px;
+  height: 25px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.detailPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailPage .main {
+  margin-top: 78px;
+  display: flex;
+  justify-content: center;
+}
+
+.detailPage .main .content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailPage .main .content img {
+  width: 1440px;
+  height: 800px;
+  -o-object-fit: over;
+     object-fit: over;
+}
+
+.weather {
+  width: 100vw;
+  height: 100vh;
+  border: 1px red solid;
 }/*# sourceMappingURL=index.css.map */
