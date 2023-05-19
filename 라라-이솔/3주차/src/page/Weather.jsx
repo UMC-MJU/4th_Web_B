@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "../index.scss";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Weather = () => {
   const [location, setLocation] = useState("");
   const [result, setResult] = useState({});
+  const navigate = useNavigate();
   const API_KEY = "21e81c801242a3bea22fe5698b9366e6";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`;
   const searchWeather = async (e) => {
@@ -22,8 +24,9 @@ const Weather = () => {
   };
   return (
     <div className="weather">
-      궁금한 나라의 날씨를 알아보세요!
       <div className="contentWrap">
+        <button onClick={() => navigate("/")}>뒤로가기</button>
+        <h2>궁금한 나라의 날씨를 알아보세요!</h2>
         <input
           placeholder="도시를 입력하세요"
           value={location}
