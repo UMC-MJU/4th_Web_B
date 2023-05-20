@@ -2,11 +2,12 @@ import { useState } from "react";
 import "../index.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 const Weather = () => {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("seoul");
   const [result, setResult] = useState({});
   const navigate = useNavigate();
-  const API_KEY = "21e81c801242a3bea22fe5698b9366e6";
+  const API_KEY = process.env.API_KEY;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`;
   const searchWeather = async (e) => {
     if (e.key === "Enter") {
