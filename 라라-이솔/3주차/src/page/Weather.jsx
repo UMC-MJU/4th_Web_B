@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Weather = () => {
-  const [location, setLocation] = useState("seoul");
+  const [location, setLocation] = useState("");
   const [result, setResult] = useState({});
   const navigate = useNavigate();
   const API_KEY = process.env.API_KEY;
